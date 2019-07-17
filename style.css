@@ -1,0 +1,23 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+}
+.fa-1x {
+    font-size: 1.5rem;
+    }
+    .navbar-toggler.toggler-example {
+    cursor: pointer;
+    }
+    .dark-text {
+    color: rgb(27, 27, 27);
+    }
+
+.nav-link{
+    color:rgb(27, 27, 27);
+}
+#logo{
+    display:inline-block;
+    justify-content:start;
+}
