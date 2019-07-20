@@ -1,23 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/* BOX SIZING */
+
 html{
     box-sizing: border-box;
 }
-*{
+
+*,*:before,*:after{
     box-sizing: inherit;
 }
-.fa-1x {
-    font-size: 1.5rem;
-    }
-    .navbar-toggler.toggler-example {
-    cursor: pointer;
-    }
-    .dark-text {
-    color: rgb(27, 27, 27);
-    }
 
-.nav-link{
-    color:rgb(27, 27, 27);
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+    overflow-x: hidden;
+    
 }
-#logo{
-    display:inline-block;
-    justify-content:start;
+
+header{
+    margin: 0 auto;
+    padding-bottom: 10vh;
+    top: 0;
+    height: auto;
+    background-color: #ffffff;
+    position: sticky;
 }
+section, nav{
+    width: 100vw;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+} */
+
+/* MENÚ HAMBURGUESA */
+
+.menu-mobile i {
+    border-width: 0.1rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+
+}
+.menu-mobile{
+    display: flex;
+    order: -1;
+    cursor: pointer; 
+}
+.menu-mobile ul{
+    display: none;
+    position: absolute;
+    min-width: 30vw;
+
+}
+.menu-mobile ul li{
+    position: relative;
+    list-style: none;
+    margin: 5px;
+}
+.menu-mobile > li{
+    float: left;
+    padding: 5%;
+    display: block;
+    font-family: 'Roboto',sans-serif;
+    
+}
+
+.menu-mobile li:hover >ul{
+    display: block;
+}
+
+.menu-mobile li a{
+    color: #363636;
+    text-decoration: none;
+    
+}
+
+.menu-mobile li a:hover{
+    background-color: #f7b617;
+    height: 50px;
+}
+
+/* VENTANA MODAL PARA INICIAR SESIÓN */
+.user{
+    width: 20px;
+    height: 20px;
+
+}
+
+.hide{
+    display: none;
+}
+
+.close{
+    cursor: pointer;
+}
+
+/* PORTADA */
+
+.portada{ 
+    display: flex;
+    flex-direction: column;
+    background-image: url(Imagenes/taxi.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 200vh;
+    position: static;   
+}
+
+.portada-mobile{
+    display: flex;
+    background-color: #f7b617;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 30%;
+    padding: 10%;
+    
+    right: 100%;
+    width: 70vw;
+    height: 50vh;
+    position: static;
+    font-weight: bolder;
+}
+
+.info{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 110vh;
+    background-color: #f7b617;
+}
+.info2-mobile{
+    
+    margin:  10% auto 0%;
+    border: solid 3px #ffffff;
+    width: 60%;
+    
+    align-content: center;
+    
+}
+.info2-mobile h1{
+    text-align: center;
+    margin: 5% auto;
+}
+
+.info2-mobile h1 img{
+    display: block;
+    margin: 5% auto;
+        
+}
+.info-mobile{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin:  0% auto 0%;
+}
+
+
+
