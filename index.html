@@ -36,8 +36,8 @@
 </ul>
 
 <!--MODAL INICIAR SESIÓN-->
-<section id="inicia-sesion" class="hide close">
-  <div> <a id="close">X</a> </div>    <!--Botón que cerrará la ventana modal-->
+<section id="inicia-sesion" class="hide">
+  <div> <a id="close" class="close">X</a> </div>    <!--Botón que cerrará la ventana modal-->
 
   <div>
     <form>
@@ -90,14 +90,128 @@
     </div>
   </section>
 
+<!-- SECCIÓN DEL CONDUCTOR -->
 
+<section class="conductor">
+  <div class="cond-mobile" style="color: #ffffff94">
+    <h1 style="font-style: bold">Conduce cuando quieras</h1>
+    <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
 
+        <div class="button">
+            <a><button id="driver">Conviertete en conductor</button></a>
+        </div>
+  </div>
+  
+<!-- Modal: Formulario para el conductor -->
+  <section id="modal-cond" class="hide">
+    <div><a id="close2" class="close">X</a></div>
+
+    <form>
+      <div>
+        <label>¿Tienes vehículo de 4 puertas?</label><br>
+            <select name="vehículo" id="vehicle">
+              <option>Si</option>
+              <option>No</option>
+            </select><br>
+        
+        <label>Marca</label><br>
+            <select name="marca">
+              <option aria-placeholder="Elige la marca del vehículo">Versa</option>
+              <option>Jetta</option>
+              <option>Aveo</option>
+            </select><br>
+        <label>¿No ves tu vehículo en la lista? <br>
+              Envíanos un correo a <a href="#">sociosmdv@uber.com</a>
+            </label><br><br>
+
+        <label>Modelo</label><br>
+            <select name="modelo">
+              <option>Modelo 1</option>
+              <option>Modelo 2</option>
+            </select><br>
+        
+        <label>Año</label><br>
+            <select name="año">
+              <option>2017</option>
+              <option>2018</option>
+              <option>2019</option>
+            </select><br>
+
+        <label>Número de la matrícula</label><br>
+              <input type="text" placeholder="Número de la matrícula">
+              <label><br>
+                La información de la matrícula ayuda a los clientes a identificar tu vehículo
+              </label><br>
+              <button class="button-send">Enviar</button>          
+            
+      </div>
+    </form>
+  </section>
+</section>
+
+<!-- SECCIÓN TARIFAS -->
+<section id="tarifas" style="color: #ffffff" class="tarifas">
+      <h1>Tarifas</h1>
+      <h2>Consulta las tarifas LabCar aquí</h2>
+    <div class="ubicacion">
+      <img src="Imagenes/circulo.png" alt="ubicación" class="user">
+      <input type="text" placeholder="Ingrese su punto de partida" class="boton-ubic"><br><br>
+  </div>
+
+    <div class="ubicacion">
+      <img src="Imagenes/flecha.png" alt="destino" class="user">
+      <input type="text" placeholder="Ingresa tu destino" class="boton-ubic"><br> <br>
+    </div>
+
+  <button class="button3" style="color: black">¡TRAZAR RUTA!</button>
+</section>
 
 </main>
 
-<!-- 
-<footer>apps</footer> -->
+<!-- PIÉ DE PÁGINA -->
+<footer>
+  
+  <section id="footer" class="footer">
+      <div class="img-footer"></div>
+          <img src="Imagenes/logo-blanco.png" alt="logo">
+      
+      <div class="menu-footer">
+      <hr>
+          <ul class="list" style="color: #ffffff">
+              <li>Viaja</li>
+              <li>Conduce</li>
+              <li>Ciudades</li>
+              <li>Entregas</li>
+              <li>¿Cómo funciona?</li>
+              <li>Países</li>
+              <li>Seguridad</li>
+          </ul>
+      </div>
 
+      <div class="redes">
+        <img src="imagenes/facebook-f-brands.png" alt="facebook" class="user">
+        <img src="imagenes/twitter-brands.png" alt="twitter" class="user">
+        <img src="imagenes/linkedin-in-brands.png" alt="linkedin" class="user">
+        <img src="imagenes/apple-brands.png" alt="apple" class="user">
+        <img src="imagenes/play-solid.png" alt="play" class="user">
+
+      </div>
+  
+      <div class="apps-footer">
+           <div class="socials">
+  
+            <div class="google">
+                <img src="Imagenes/google-play.png" alt="google">
+            </div>
+    
+            <div class="apple">
+                <img src="Imagenes/app-store.png" alt="apple">
+            </div>
+          </div>
+      </div>
+
+  </section>
+</footer>
 <script src="main.js"></script>
 </body>
  </html>
