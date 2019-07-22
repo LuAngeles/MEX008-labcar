@@ -39,20 +39,21 @@
 <section id="inicia-sesion" class="hide">
   <div> <a id="close" class="close">X</a> </div>    <!--Botón que cerrará la ventana modal-->
 
-  <div>
+  <div class="iniciar">
     <form>
-      <div>
+      <div class="username">
           <label for="username" ><img src="Imagenes/user-solid.png" alt="username" class="user"></label>
           <input type="text" id="username" placeholder="Username">
       </div>
       
-      <div>
+      <div class="password">
           <label for="password"><img src="Imagenes/lock-solid.png" alt="password" class="user"></label>
           <input type="text" name="" id="password" placeholder="Password">
       </div>
       
       <div class="button">
-        <button>LOGING</button>
+        <a style="color: #ffffff">LOGING</a>
+        
       </div>
     </form>
     <h4>Forgot your Password? <a href="#">Click here</a></h4>
@@ -93,7 +94,7 @@
 <!-- SECCIÓN DEL CONDUCTOR -->
 
 <section class="conductor">
-  <div class="cond-mobile" style="color: #ffffff94">
+  <div class="cond-mobile" style="color: #ffffffc2">
     <h1 style="font-style: bold">Conduce cuando quieras</h1>
     <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
 
@@ -107,15 +108,15 @@
     <div><a id="close2" class="close">X</a></div>
 
     <form>
-      <div>
+      <div class="driver" style="color: #ffffff">
         <label>¿Tienes vehículo de 4 puertas?</label><br>
-            <select name="vehículo" id="vehicle">
+            <select name="vehículo" id="vehicle" class="vehicle">
               <option>Si</option>
               <option>No</option>
             </select><br>
         
         <label>Marca</label><br>
-            <select name="marca">
+            <select name="marca" class="vehicle">
               <option aria-placeholder="Elige la marca del vehículo">Versa</option>
               <option>Jetta</option>
               <option>Aveo</option>
@@ -125,13 +126,13 @@
             </label><br><br>
 
         <label>Modelo</label><br>
-            <select name="modelo">
+            <select name="modelo" class="vehicle">
               <option>Modelo 1</option>
               <option>Modelo 2</option>
             </select><br>
         
         <label>Año</label><br>
-            <select name="año">
+            <select name="año" class="vehicle">
               <option>2017</option>
               <option>2018</option>
               <option>2019</option>
