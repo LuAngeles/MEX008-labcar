@@ -4,107 +4,213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css" >
     <title>LabCar</title>
+    
 </head>
 
 <body>
 <!--NAVBAR (Barra de Navegación)-->
-  <header>
-    <nav>
-        <figure> 
-           <a href="#"><img src="imagenes/logo.png" alt="LabCar"></a>
-        </figure>
+
+<!-- DESKTOP -->
+<header> 
+<nav class="navbar">
   
-<!--MENÚ HAMBURGUESA-->
-  <!--Mobile-->
-<!--Se crea una lista desordenada para los elementos del menú-->
-<ul class="menu-mobile">
-  <li>
-    
-      <!--<i class="fas fa-camera"></i>-->
-      <figure>
-        <a><img src="Imagenes/bars-solid.png" alt="menu" class="user"></a>
-      </figure>
-        <ul>
-          <li><a>Viaja</a></li>
-          <li><a>Conduce</a></li>
-          <li><a class="session" id="session">Inicia Sesión</a></li>
+    <div id="nav-mobile">
+        <ul class="nav-mobile nav-mobile-hide">
+          <li>
+            <figure> 
+              <a><img src="Imagenes/bars-solid.png" alt="menu" class="user"></a>
+            </figure>
+            
+                <ul>
+                  <li><a>Viaja</a></li>
+                  <li><a href="#modal-cond">Conduce</a></li>
+                  <li><a class="session" id="session" href="#inicia-sesion">Inicia Sesión</a></li>
+                </ul>
+          </li>
         </ul>
-  </li>
-</ul>
-
-<!--MODAL INICIAR SESIÓN-->
-<section id="inicia-sesion" class="hide">
-  <div> <a id="close" class="close">X</a> </div>    <!--Botón que cerrará la ventana modal-->
-
-  <div class="iniciar">
-    <form>
-      <div class="username">
-          <label for="username" ><img src="Imagenes/user-solid.png" alt="username" class="user"></label>
-          <input type="text" id="username" placeholder="Username">
-      </div>
-      
-      <div class="password">
-          <label for="password"><img src="Imagenes/lock-solid.png" alt="password" class="user"></label>
-          <input type="text" name="" id="password" placeholder="Password">
-      </div>
-      
-      <div class="button">
-        <a style="color: #ffffff">LOGING</a>
-        
-      </div>
-    </form>
-    <h4>Forgot your Password? <a href="#">Click here</a></h4>
-    
-  </div>
-
-</section>
-
+    </div>
+  
+    <div id="nav-desktop" class="navbar">  
+          <figure> 
+              <a href="#"><img src="imagenes/logo.png" alt="LabCar"></a>
+          </figure>
+          <div class="nav-desktop-hide" >
+            <a class="nav-item nav-link" href="#" style="color: #363636">Viaja</a>
+            <a class="nav-item nav-link" href="#" style="color: #363636">Conduce</a>
+            <a class="nav-item nav-link" href="#session" style="color: #363636">Inicia Sesión</a>  
+          </div> 
+    </div>
 </nav>
+<!-- MOBILE -->    
+     
+<!--MENÚ HAMBURGUESA-->
+
+<!--Se crea una lista desordenada para los elementos del menú-->
+
+
 </header>
 
 <!--SECCIÓN HERO-->
 <main name="mobile row">
+  <!-- Desktop -->
   <section class="portada">
-    <div class="portada-mobile" style="color: #ffffff">
-      <h1>Comienza a viajar con <img src="Imagenes/logo-blanco.png" alt="logo"></h1>
+    <div class="hero-info">
+      <div id="hero-desktop" class="hero-desktop-hide">
+        <div>
+          <h1 style="color: #ffffff">Disfruta del viaje</h1>
+          <h2 style="color: #ffffff">Eres dueño de tu tiempo</h2><br>
+        </div>
+        <div>
+          <p style="color: #ffffff">Viaja con</p>
+          <figure>
+            <img src="/Imagenes/logo-blanco.png" alt="logo-blanco">
+          </figure>
+        </div>
+        <a href="#inicia-sesión" class="button3" style="color: #363636">REGÍSTRATE</a>
+
+        <div>
+          <hr><p>O bien</p>
+        </div>
+        <a href="#modal-cond" class="button3" style="color: #363636;">Conviértete en un conductor</a>
+
+      </div>
+
     
-
-    <div class="button">
-      <button>Descarga la App</button>
+  
+  <!-- Mobile -->
+     
+    <div id="mobile-hero" class="portada-mobile" style="color: #ffffff">
+      <div>
+        <h1>Comienza a viajar con <br><br></h1>
+          <figure><img src="Imagenes/logo-blanco.png" alt="logo"></figure>
+      </div>  
+    
+        <button class="button3">Descarga la App</button>
+        
+      </div>
     </div>
-  </div>
   </section>
-
+ 
 <!-- SECCIÓN INFO -->
 
-  <section class="info" style="color: #ffffff">
+
+<section class="info" style="color: #ffffff">
     <div class="info2-mobile">
       <h1>La nueva app
       <img src="Imagenes/celular.png" alt="cel-labcar">
-    </h1>
-    </div>
-    <div class="info-mobile">
+      </h1>
+    <div>
       <h1>Llega a tu destino aún más rápido</h1>
     </div>
-  </section>
+    </div>
+
+  <div class="info-desktop-hide info2-mobile">
+    <div class="imgcel-desktop">
+      <img src="/Imagenes/celular.png" alt="cel-labcar">
+    <div class="info-desktop">
+      <h4>Descarga la nueva app</h4>
+      <p>La versión actualizada de LabCar está llena de nuevas funciones
+        para llegar a donde quieras aún más fácil y rápido. <br><br>
+      
+      Con solo tocar un botón, un auto llega justo a tu ubicación. Súbete y
+      no te preocupes: tu conductor</p>
+    </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- SECCIÓN DEL CONDUCTOR -->
 
-<section class="conductor">
-  <div class="cond-mobile" style="color: #ffffffc2">
-    <h1 style="font-style: bold">Conduce cuando quieras</h1>
-    <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
+<!-- Desktop -->
+<section  class="conductor">
+    <div class="cond-desktop" style="color: #ffffffc2">
+        <h1 style="font-style: bold">Conduce cuando quieras</h1>
+        <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
+      
+            <div>
+                <a><button id="driver-desktop" class="button">Conviertete en conductor</button></a>
+            </div>
+      </div>
 
-        <div class="button">
-            <a><button id="driver">Conviertete en conductor</button></a>
-        </div>
-  </div>
+<!-- Mobile -->
+<div class="cond-mobile" style="color: #ffffffc2">
+  <h1 style="font-style: bold">Conduce cuando quieras</h1>
+  <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
+
+      <div>
+          <a><button id="driver" class="button">Conviertete en conductor</button></a>
+      </div>
+</div>
+
+</section>
   
+
+
+<!-- SECCIÓN TARIFAS -->
+<section id="tarifas" style="color: #ffffff" class="tarifas">
+  <div class="tarifa-general">
+    <!-- Desktop -->
+      <div class="tarifa-desktop">
+          <h1>Tarifas</h1>
+          <h2>Consulta las tarifas LabCar aquí</h2>
+        <div class="ubicacion">
+          <img src="Imagenes/circulo.png" alt="ubicación" class="user">
+          <input type="text" placeholder="Ingrese su punto de partida" class="boton-ubic"><br><br>
+      </div>
+    
+        <div class="ubicacion">
+          <img src="Imagenes/flecha.png" alt="destino" class="user">
+          <input type="text" placeholder="Ingresa tu destino" class="boton-ubic"><br> <br>
+        </div>
+    
+      <button class="button3" style="color: black">¡TRAZAR RUTA!</button>
+
+
+    </div>
+
+    <!-- Mobile -->
+
+  </div>
+
+</section>
+
+<!--MODAL INICIAR SESIÓN-->
+<section id="inicia-sesion" class="hide">
+    <div> <a id="close" class="close">X</a> </div>    <!--Botón que cerrará la ventana modal-->
+  
+    <div class="iniciar">
+      <figure>
+        <img src="./Imagenes/user-circle-solid.svg" alt="usuario">
+          
+      </figure>
+      <form>
+        <div class="username">
+            <label for="username" ><img src="Imagenes/user-solid.png" alt="username" class="user"></label>
+            <input type="text" id="username" placeholder="Username">
+        </div>
+        
+        <div class="password">
+            <label for="password"><img src="Imagenes/lock-solid.png" alt="password" class="user"></label>
+            <input type="text" name="" id="password" placeholder="Password">
+        </div>
+        
+        <div class="button">
+          <a style="color: #ffffff">LOGING</a>
+          
+        </div>
+      </form>
+      <h4>Forgot your Password? <a href="#">Click here</a></h4>
+      
+    </div>
+  
+  </section>
 <!-- Modal: Formulario para el conductor -->
-  <section id="modal-cond" class="hide">
+<section id="modal-cond" class="hide">
     <div><a id="close2" class="close">X</a></div>
 
     <form>
@@ -143,29 +249,12 @@
               <label><br>
                 La información de la matrícula ayuda a los clientes a identificar tu vehículo
               </label><br>
-              <button class="button-send">Enviar</button>          
+              <button class="button-send">ENVIAR</button>          
             
       </div>
     </form>
   </section>
-</section>
 
-<!-- SECCIÓN TARIFAS -->
-<section id="tarifas" style="color: #ffffff" class="tarifas">
-      <h1>Tarifas</h1>
-      <h2>Consulta las tarifas LabCar aquí</h2>
-    <div class="ubicacion">
-      <img src="Imagenes/circulo.png" alt="ubicación" class="user">
-      <input type="text" placeholder="Ingrese su punto de partida" class="boton-ubic"><br><br>
-  </div>
-
-    <div class="ubicacion">
-      <img src="Imagenes/flecha.png" alt="destino" class="user">
-      <input type="text" placeholder="Ingresa tu destino" class="boton-ubic"><br> <br>
-    </div>
-
-  <button class="button3" style="color: black">¡TRAZAR RUTA!</button>
-</section>
 
 </main>
 
@@ -176,21 +265,44 @@
       <div class="img-footer"></div>
           <img src="Imagenes/logo-blanco.png" alt="logo">
       
-      <div class="menu-footer">
+      <div class="menu-footer row">
       <hr>
-          <ul class="list" style="color: #ffffff">
-              <li>Viaja</li>
-              <li>Conduce</li>
-              <li>Ciudades</li>
-              <li>Entregas</li>
-              <li>¿Cómo funciona?</li>
-              <li>Países</li>
-              <li>Seguridad</li>
-          </ul>
+        
+            <ul class="list" style="color: #ffffff">
+                <li>Viaja</li>
+                <li>Conduce</li>
+                <li>Ciudades</li>
+                <li>Entregas</li>        
+                <li>¿Cómo funciona?</li>
+                <li>Países</li>
+                <li>Seguridad</li>
+                <li>Oportunidades</li>
+                <li>Nuestra historia</li>
+                <li>API de LabCar</li>
+                <li>Eventos</li>
+                <li>Desarrolladores</li>
+                <li>Servicios</li>
+                <li>Laboratoria</li>
+                <li>Coders</li>
+                  
+          <div class="apps-footer">
+             
+              <div class="socials">
+     
+               <div class="google">
+                   <img src="Imagenes/google-play.png" alt="google">
+               </div>
+       
+               <div class="apple">
+                   <img src="Imagenes/app-store.png" alt="apple">
+               </div>
+             </div>
+         </div>
+        </ul>          
       </div>
 
       <div class="redes">
-        <img src="imagenes/facebook-f-brands.png" alt="facebook" class="user">
+        <img src="imagenes/facebook-f-brands.svg" alt="facebook" class="user" style="color: #ffffff">
         <img src="imagenes/twitter-brands.png" alt="twitter" class="user">
         <img src="imagenes/linkedin-in-brands.png" alt="linkedin" class="user">
         <img src="imagenes/apple-brands.png" alt="apple" class="user">
@@ -198,18 +310,7 @@
 
       </div>
   
-      <div class="apps-footer">
-           <div class="socials">
-  
-            <div class="google">
-                <img src="Imagenes/google-play.png" alt="google">
-            </div>
-    
-            <div class="apple">
-                <img src="Imagenes/app-store.png" alt="apple">
-            </div>
-          </div>
-      </div>
+     
 
   </section>
 </footer>

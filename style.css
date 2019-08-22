@@ -14,59 +14,54 @@ body{
     padding: 0%;
     font-family: 'Roboto',sans-serif;
     overflow-x: hidden;
+    color: #363636;
     
 }
 
 header{
     margin: 0 auto;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
     top: 0;
     height: auto;
     background-color: #ffffff;
     position: sticky;
 }
-section, nav{
-    width: 100vw;
-    margin: 0 auto;
+.navbar{
+    display: flex;
+    flex-direction: row;
 }
 
-nav{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 a{
     text-decoration: none;
 }
 */
-
-
-/* MENÚ HAMBURGUESA */
-
-.menu-mobile i {
-    border-width: 0.1rem;
-    border-radius: 0.3rem;
-    padding: 0.3rem;
-
-}
-.menu-mobile{
+/* VERSIÓN MOBILE */
+.nav-mobile{
     display: flex;
-    order: -1;
+   
+}
+.nav-link{
+    display: none;
+}
+
+/* Menú Hamburguesa */
+
+#nav-mobile{
+    display: flex;
     cursor: pointer; 
 }
-.menu-mobile ul{
+.nav-mobile ul{
     display: none;
-    position: absolute;
+    position: relative;
     min-width: 30vw;
 
 }
-.menu-mobile ul li{
+.nav-mobile ul li{
     position: relative;
     list-style: none;
     margin: 5px;
 }
-.menu-mobile > li{
+.nav-mobile > li{
     float: left;
     padding: 5%;
     display: block;
@@ -74,21 +69,9 @@ a{
     
 }
 
-.menu-mobile li:hover >ul{
+.nav-mobile li:hover >ul{
     display: block;
 }
-
-.menu-mobile li a{
-    color: #363636;
-    text-decoration: none;
-    
-}
-
-.menu-mobile li a:hover{
-    background-color: #f7b617;
-    height: 50px;
-}
-
 /* VENTANA MODAL PARA INICIAR SESIÓN */
 .iniciar{
     display: flex;
@@ -98,10 +81,10 @@ a{
     padding: 10% 2%;
     background-color:#2da7a7;
     border-radius: 3px;
-    width: 20rem;
+    width: 25rem;
     height: auto;
     justify-content: center;
-    position: static
+    
     
 }
 .username,.password, .iniciar h4{
@@ -112,14 +95,16 @@ a{
 
 .close{ 
     position: relative;
-    margin: 37%;
-    padding: 10%;
+    margin: 12%;
+    padding: 20%;
     top: 50px; 
 }
 
 .user{
+    display: flex;
     width: 20px;
     height: 20px;
+    
 }
 
 .hide{
@@ -135,42 +120,44 @@ a{
     background-color: rgba(247, 184, 23, 0.9);
     margin: 5% auto;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
-    width: 5rem;
-    height: auto;
+    width: 50%;
+    height: 5vh;
+    align-items: center;
     justify-content: center;
     font-style: bolder; 
+    font-size: 1rem;
+    
     
 }
+/* SECCIÓN HERO */
 
-/* PORTADA */
-
+/* Fondo de Hero */
 .portada{ 
     display: flex;
     flex-direction: column;
     background-image: url(Imagenes/taxi.jpg);
     background-size: cover;
-    width: 100vw;
-    height: 200vh;
-    position: static;   
+    height: 150vh;
+    background-position: center bottom;   
 }
-
+.hero-desktop-hide{
+    display: none;
+}
 .portada-mobile{
     display: flex;
     background-color: #f7b617;
     justify-content: flex-start;
     flex-direction: column;
-    align-items: flex-start;
     margin: 30%;
     padding: 10%;
-    
     right: 100%;
     width: 70vw;
     height: 50vh;
-    position: static;
     font-weight: bolder;
 }
+
 
 /* SECCIÓN DE INFORMACIÓN */
 .info{
@@ -180,12 +167,18 @@ a{
     height: 120vh;
     background-color: #f7b617;
 }
+
+.info-desktop-hide{
+    display: none;
+}
+
 .info2-mobile{
     
-    margin:  10% auto 0%;
+    margin:  10%;
+    padding: 5%;
     border: solid 3px #ffffff;
-    width: 60%;
-    
+    width: auto;
+    height: auto;
     align-content: center;
     
 }
@@ -207,14 +200,18 @@ a{
     margin:  0% auto 0%;
 }
 
+
 /* SECCIÓN DE CONDUCTOR*/
 .conductor{
     display: flex;
     background-image: url(Imagenes/conduce.jpg);
     background-size: cover;
+    background-position: center right;
     position: static;
     height: 120vh;   
-    
+}
+.cond-desktop{
+    display: none;
 }
 .cond-mobile{
     display: block;
@@ -223,10 +220,9 @@ a{
     right: 15%;
     margin:  10% auto;
     padding: 2%;
-    border: solid 3px #ffffff;
+    background-color: rgba(0, 0,0, 0.5)
     width: 60%;
     height: 30%;
-    
     align-content: center; 
 }
 
@@ -256,11 +252,15 @@ a{
 
 .button3{
     display: flex;
+    justify-content: center;
     background-color: #ffffff;
     border:none;
     font-weight: bolder;
-    height: 40px;
+    width: auto;
+    height: auto;
     margin: 0% auto;
+    border-radius: 5px;
+    font-family: 'Roboto',sans-serif;
 
 }
 /* SECCIÓN FOOTER */
@@ -279,10 +279,10 @@ a{
 .driver{
     background-color: #696969a9;
     width: auto;
-    height:80vh;
+    height:100vh;
     margin: 10px;
     padding: 20px;
-    display: block;;
+    display: block;
     justify-content: center;
     align-items: center;
 }
@@ -295,3 +295,101 @@ a{
     height: 5vh;
 }
 
+.button-send{
+    display: flex;
+    background-color: rgba(77, 210, 250, 0.9);
+    margin: 5% auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    font-style: bolder; 
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+#close2{ 
+    position: relative;
+    margin: 10%;
+    padding: 85%;
+    top: 50px; 
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;   
+}
+
+/* VERSIÓN DESKTOP */
+/* Navbar */
+
+@media only screen and (min-width: 768px){
+    .nav-mobile-hide{
+        display: none;        
+    }    
+    
+    .nav-link{
+        display: flex;
+    }
+    .nav-desktop-hide{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+/* Sección de Hero */
+    #mobile-hero{
+        display:none;
+    }
+    #hero-desktop{
+        display: flex;
+        background-color: #f7b617;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 30%;
+        padding: 5%;
+        right: 100%;
+        width: 70vw;
+        height: 60vh;
+        
+        font-weight: bolder;
+        }
+
+/* Sección de información */
+
+    .info2-mobile{
+        display:none;
+    }
+    .info-desktop-hide{
+        display: flex;
+        flex-direction: row;
+    }
+    .imgcel-desktop{
+        display: flex;
+    }
+/* Sección de conductor */
+
+    .cond-mobile{
+        display:none;
+    }
+    .cond-desktop{
+        display: block;
+        position: relative;
+        top: 5%;
+        left: 20%;
+        margin:  10% auto;
+        padding: 15% 0 0 0;
+        width: 40%;
+        height: 30%;
+        align-content: center; 
+    }
+
+ }
