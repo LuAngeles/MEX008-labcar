@@ -72,65 +72,7 @@ a{
 .nav-mobile li:hover >ul{
     display: block;
 }
-/* VENTANA MODAL PARA INICIAR SESIÓN */
-.iniciar{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    margin: 2% 0 2% 0;
-    padding: 10% 2%;
-    background-color:#2da7a7;
-    border-radius: 3px;
-    width: 25rem;
-    height: auto;
-    justify-content: center;
-    
-    
-}
-.username,.password, .iniciar h4{
-    display: flex;
-    margin: 2% 0 2% 0;
-    justify-content: center;
-}
 
-.close{ 
-    position: relative;
-    margin: 12%;
-    padding: 20%;
-    top: 50px; 
-}
-
-.user{
-    display: flex;
-    width: 20px;
-    height: 20px;
-    
-}
-
-.hide{
-    display: none;
-}
-
-.close{
-    cursor: pointer;
-}
-
-.button{
-    display: flex;
-    background-color: rgba(247, 184, 23, 0.9);
-    margin: 5% auto;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 50%;
-    height: 5vh;
-    align-items: center;
-    justify-content: center;
-    font-style: bolder; 
-    font-size: 1rem;
-    
-    
-}
 /* SECCIÓN HERO */
 
 /* Fondo de Hero */
@@ -173,7 +115,6 @@ a{
 }
 
 .info2-mobile{
-    
     margin:  10%;
     padding: 5%;
     border: solid 3px #ffffff;
@@ -216,13 +157,12 @@ a{
 .cond-mobile{
     display: block;
     position: relative;
-    top: 20%;
-    right: 15%;
-    margin:  10% auto;
+    top: 15%;
+    margin:  0 auto;
     padding: 2%;
-    background-color: rgba(0, 0,0, 0.5)
-    width: 60%;
-    height: 30%;
+    background-color: rgba(0, 0,0, 0.5);
+    width: 100%;
+    height: 100vh;
     align-content: center; 
 }
 
@@ -231,7 +171,23 @@ a{
     background-color: #f7b617;
     margin: 0% 0% 2% auto;
     padding: 2%;
+    height: auto;
+}
 
+.tarifa-general{
+    display: flex;
+    flex-direction: row;
+}   
+.tarifa-general input{
+    margin-left: 3rem;
+    height: 3rem;
+    width: 60vw;
+    background-color: #F7B617;
+    border-color:  white;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 0.8rem;
+    padding-left: 1rem;
 }
 
 .ubicacion{
@@ -239,15 +195,6 @@ a{
     flex-direction: row;
     margin: 2% 0% 2% 0%;
     padding: 0%;
-}
-
-.boton-ubic{
-    background: transparent;
-    border: solid 1px #ffffff;
-    margin: 0% 1%;
-    width: 50%;
-    font-style: #ffffff;
-    border-radius: 10px;
 }
 
 .button3{
@@ -259,28 +206,123 @@ a{
     width: auto;
     height: auto;
     margin: 0% auto;
+    padding: 10px;
     border-radius: 5px;
     font-family: 'Roboto',sans-serif;
+}
 
+#map{
+    display: flex;
+    width: 30rem;
+    height: 30rem;
+    
+}
+.map-route{
+    
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 3rem;
+    border-color: white;
+    border-style: solid;
+    
 }
 /* SECCIÓN FOOTER */
-.footer{
+.footer-general{
     background-color: #363636;
 }
-.footer ul li{
-    list-style: none;
-}
-.apps-footer{
-    display: flex;
-    flex-flow: column wrap;
+
+.head-footer img{
+    margin: 1rem;
 }
 
+.body-footer{
+    column-count: 2;
+
+}
+
+.redes{
+    display: flex;
+    flex-direction:row;
+    align-items: flex-end;
+    margin-left: 20rem;
+}
+
+.menu-footer{
+    margin-left: 1rem;
+   
+}
+    
+.menu-footer ul li{
+    list-style: none;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+}
+
+/* VENTANA MODAL PARA INICIAR SESIÓN */
+
+.iniciar{
+    
+    position: absolute;
+    
+    margin: 2% 0 2% 0;
+    padding: 10% 2%;
+    background-color:#2da7a7;
+    border-radius: 3px;
+    width: 25rem;
+    height: auto;
+    
+    
+    
+}
+.username,.password, .iniciar h4{
+    display: flex;
+    margin: 2% 0 2% 0;
+    justify-content: center;
+}
+
+.close{ 
+    position: relative;
+    margin: 0.1rem;
+    padding: 0.1rem;
+    
+    cursor: pointer;
+}
+
+.user{
+    display: flex;
+    width: 20px;
+    height: 20px;
+ }
+ 
+
+.button{
+    display: flex;
+    background-color: rgba(247, 184, 23, 0.9);
+    margin: 5% auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-style: bolder; 
+    font-size: 1rem;   
+}
+
+
 /* SECCIÓN MODAL DE CONDUCTOR */
+
 .driver{
     background-color: #696969a9;
-    width: auto;
-    height:100vh;
-    margin: 10px;
+    width: 50vw;
+    height:110vh;
+    margin: 5px;
+    margin-right: 1px;
     padding: 20px;
     display: block;
     justify-content: center;
@@ -312,22 +354,16 @@ a{
 }
 
 #close2{ 
+    cursor: pointer;
     position: relative;
-    margin: 10%;
-    padding: 85%;
-    top: 50px; 
-}
-ul{
-    margin: 0;
-    padding: 0;
+    margin: 0.1rem;
+    padding: 0.1rem;
+     
 }
 
-.socials{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;   
+.hide{
+    display: none;
 }
-
 /* VERSIÓN DESKTOP */
 /* Navbar */
 
@@ -391,5 +427,21 @@ ul{
         height: 30%;
         align-content: center; 
     }
+    .tarifa-general{
+        display: flex;
+        flex-direction: column;
+
+    }
+/* Sección de footer */
+.redes{
+    display: flex;
+    margin: 1rem;
+    align-content: flex-end;
+}
+
+.list2{
+    display: flex;
+}
+
 
  }

@@ -14,9 +14,14 @@
 <body>
 <!--NAVBAR (Barra de Navegación)-->
 
-<!-- DESKTOP -->
+
 <header> 
 <nav class="navbar">
+  <!-- MOBILE -->    
+     
+<!--MENÚ HAMBURGUESA-->
+
+<!--Se crea una lista desordenada para los elementos del menú-->
   
     <div id="nav-mobile">
         <ul class="nav-mobile nav-mobile-hide">
@@ -27,30 +32,24 @@
             
                 <ul>
                   <li><a>Viaja</a></li>
-                  <li><a href="#modal-cond">Conduce</a></li>
-                  <li><a class="session" id="session" href="#inicia-sesion">Inicia Sesión</a></li>
+                  <li><a href="#modal-cond" id="driver-mobile">Conduce</a></li>
+                  <li><a class="session" href="#login" id="login-mobile">Inicia Sesión</a></li>
                 </ul>
           </li>
         </ul>
     </div>
-  
+  <!-- DESKTOP -->
     <div id="nav-desktop" class="navbar">  
           <figure> 
               <a href="#"><img src="imagenes/logo.png" alt="LabCar"></a>
           </figure>
           <div class="nav-desktop-hide" >
             <a class="nav-item nav-link" href="#" style="color: #363636">Viaja</a>
-            <a class="nav-item nav-link" href="#" style="color: #363636">Conduce</a>
-            <a class="nav-item nav-link" href="#session" style="color: #363636">Inicia Sesión</a>  
+            <a class="nav-item nav-link" href="#modal-cond" id="driver-desktop" style="color: #363636">Conduce</a>
+            <a class="nav-item nav-link" href="#login" id="login-desktop" style="color: #363636">Inicia Sesión</a>  
           </div> 
     </div>
 </nav>
-<!-- MOBILE -->    
-     
-<!--MENÚ HAMBURGUESA-->
-
-<!--Se crea una lista desordenada para los elementos del menú-->
-
 
 </header>
 
@@ -75,7 +74,7 @@
         <div>
           <hr><p>O bien</p>
         </div>
-        <a href="#modal-cond" class="button3" style="color: #363636;">Conviértete en un conductor</a>
+        <a href="#modal-cond" class="button3" id="driver-button" style="color: #363636;">Conviértete en un conductor</a>
 
       </div>
 
@@ -133,7 +132,7 @@
         <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
       
             <div>
-                <a><button id="driver-desktop" class="button">Conviertete en conductor</button></a>
+                <a><button href="#modal-cond" class="button" style="color: #ffffff">Conviértete en conductor</button></a>
             </div>
       </div>
 
@@ -143,7 +142,7 @@
   <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
 
       <div>
-          <a><button id="driver" class="button">Conviertete en conductor</button></a>
+          <a><button href="#modal-cond" class="button" id="driver" style="color: #ffffff">Conviértete en conductor</button></a>
       </div>
 </div>
 
@@ -157,37 +156,40 @@
     <!-- Desktop -->
       <div class="tarifa-desktop">
           <h1>Tarifas</h1>
-          <h2>Consulta las tarifas LabCar aquí</h2>
-        <div class="ubicacion">
-          <img src="Imagenes/circulo.png" alt="ubicación" class="user">
-          <input type="text" placeholder="Ingrese su punto de partida" class="boton-ubic"><br><br>
-      </div>
-    
-        <div class="ubicacion">
-          <img src="Imagenes/flecha.png" alt="destino" class="user">
-          <input type="text" placeholder="Ingresa tu destino" class="boton-ubic"><br> <br>
+          <h2>Consulta las tarifas LabCar aquí:</h2>
+          <form>
+            <label for="partida"></label>
+              <img src="Imagenes/circulo.png" alt="ubicación" class="user">
+              <input type="text" placeholder="Ingrese su punto de partida">
+          
+              <label for="destino"></label>
+              <img src="Imagenes/flecha.png" alt="destino" class="user">
+              <input type="text" placeholder="Ingresa tu destino"><br> <br>
+
+          </form>
+          <button class="button3" style="color: black">¡TRAZAR RUTA!</button>
+        
         </div>
-    
-      <button class="button3" style="color: black">¡TRAZAR RUTA!</button>
+        <div id="map" class="map-route">
 
+        </div>
 
-    </div>
-
-    <!-- Mobile -->
-
-  </div>
+      </div>
 
 </section>
 
 <!--MODAL INICIAR SESIÓN-->
-<section id="inicia-sesion" class="hide">
-    <div> <a id="close" class="close">X</a> </div>    <!--Botón que cerrará la ventana modal-->
+
+<section id="login" class="hide">
+  <div class="iniciar">
+    <div> 
+      <a href="#" id="close" class="close">X</a> 
+    </div>     <!--Botón que cerrará la ventana modal -->
   
-    <div class="iniciar">
       <figure>
         <img src="./Imagenes/user-circle-solid.svg" alt="usuario">
-          
       </figure>
+
       <form>
         <div class="username">
             <label for="username" ><img src="Imagenes/user-solid.png" alt="username" class="user"></label>
@@ -204,14 +206,16 @@
           
         </div>
       </form>
-      <h4>Forgot your Password? <a href="#">Click here</a></h4>
+      <p>Forgot your Password? <a href="#">Click here</a></p>
       
     </div>
   
   </section>
 <!-- Modal: Formulario para el conductor -->
 <section id="modal-cond" class="hide">
-    <div><a id="close2" class="close">X</a></div>
+    <div>
+      <a id="close2" class="close">X</a>
+    </div>
 
     <form>
       <div class="driver" style="color: #ffffff">
@@ -252,7 +256,7 @@
               <button class="button-send">ENVIAR</button>          
             
       </div>
-    </form>
+    </form> 
   </section>
 
 
@@ -260,60 +264,62 @@
 
 <!-- PIÉ DE PÁGINA -->
 <footer>
-  
-  <section id="footer" class="footer">
-      <div class="img-footer"></div>
+  <div class="footer-general">
+      <div class="head-footer">
+        <figure>
           <img src="Imagenes/logo-blanco.png" alt="logo">
+        </figure>
+      </div>
+
+      <div class="body-footer">
+          <div class="redes">
+              <img src="imagenes/facebook-f-brands.svg" alt="facebook" class="user" style="color: #ffffff">
+              <img src="imagenes/twitter-brands.png" alt="twitter" class="user">
+              <img src="imagenes/linkedin-in-brands.png" alt="linkedin" class="user">
+              <img src="imagenes/apple-brands.png" alt="apple" class="user">
+              <img src="imagenes/play-solid.png" alt="play" class="user">
       
-      <div class="menu-footer row">
-      <hr>
-        
-            <ul class="list" style="color: #ffffff">
-                <li>Viaja</li>
-                <li>Conduce</li>
-                <li>Ciudades</li>
-                <li>Entregas</li>        
-                <li>¿Cómo funciona?</li>
-                <li>Países</li>
-                <li>Seguridad</li>
-                <li>Oportunidades</li>
-                <li>Nuestra historia</li>
-                <li>API de LabCar</li>
-                <li>Eventos</li>
-                <li>Desarrolladores</li>
-                <li>Servicios</li>
-                <li>Laboratoria</li>
-                <li>Coders</li>
-                  
-          <div class="apps-footer">
-             
+          </div>
+          <div class="menu-footer">
+              <ul style="color: #ffffff">
+                  <li>Viaja</li>
+                  <li>Conduce</li>
+                  <li>Ciudades</li>
+                  <li>Entregas</li>        
+                  <li>¿Cómo funciona?</li>
+                  <li>Países</li>
+                  <li>Seguridad</li>
+              </ul>
+              <div class="list2"> 
+                  <ul> 
+                      <li>Oportunidades</li>
+                      <li>Nuestra historia</li>
+                      <li>API de LabCar</li>
+                      <li>Eventos</li>
+                      <li>Desarrolladores</li>
+                      <li>Servicios</li>
+                      <li>Laboratoria</li>
+                      <li>Coders</li>
+                  </ul>
+              </div>
               <div class="socials">
-     
-               <div class="google">
-                   <img src="Imagenes/google-play.png" alt="google">
-               </div>
-       
-               <div class="apple">
-                   <img src="Imagenes/app-store.png" alt="apple">
-               </div>
-             </div>
-         </div>
-        </ul>          
+                <figure>
+                  <img src="Imagenes/google-play.png" alt="google">
+                  <img src="Imagenes/app-store.png" alt="apple">
+                </figure>
+              </div>
+          </div>            
       </div>
-
-      <div class="redes">
-        <img src="imagenes/facebook-f-brands.svg" alt="facebook" class="user" style="color: #ffffff">
-        <img src="imagenes/twitter-brands.png" alt="twitter" class="user">
-        <img src="imagenes/linkedin-in-brands.png" alt="linkedin" class="user">
-        <img src="imagenes/apple-brands.png" alt="apple" class="user">
-        <img src="imagenes/play-solid.png" alt="play" class="user">
+      <div class="end-footer">
+        <p>&copy 2017 LabCar technologies Inc.</p>
 
       </div>
+  </div>
   
-     
-
-  </section>
 </footer>
+<script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxHqUuOdz0DO9FyHx9_CGuHjKu8vbgsbo&callback=initMap">
+   </script>
 <script src="main.js"></script>
 </body>
  </html>
